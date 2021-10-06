@@ -30,6 +30,19 @@ function writeToLog(
 	logEntries.push(logEntry);
 	console.log(logEntries);
 }
+function calculateResult(calculationType) {
+	const enteredNumber = getUserNumberInput();
+	const initialResult = currentResult;
+	if (calculationType === 'ADD') {
+		currentResult += enteredNumber;
+	} else {
+		currentResult -= enteredNumber;
+	}
+
+	createAndWriteOutput('-', initialResult, enteredNumber);
+	writeToLog('SUBTRACT', initialResult, enteredNumber, currentResult);
+}
+
 function add() {
 	const enteredNumber = getUserNumberInput();
 	const initialResult = currentResult;
@@ -79,7 +92,6 @@ function multiply() {
 	createAndWriteOutput('*', initialResult, enteredNumber);
 	writeToLog('MULTIPLY', initialResult, enteredNumber, currentResult);
 	// typeof allows to see what the type of variable is at run time
-	
 }
 
 function divide() {
