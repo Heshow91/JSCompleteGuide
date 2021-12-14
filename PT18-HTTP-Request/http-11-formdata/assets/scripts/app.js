@@ -5,6 +5,7 @@ const fetchButton = document.querySelector('#available-posts button');
 const postList = document.querySelector('ul');
 
 function sendHttpRequest(method, url, data) {
+  // the long way
   // const promise = new Promise((resolve, reject) => {
   // const xhr = new XMLHttpRequest();
   // xhr.setRequestHeader('Content-Type', 'application/json');
